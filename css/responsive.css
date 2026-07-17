@@ -88,6 +88,18 @@
 
     display:block;
 
+    color: var(--text);
+
+    background: transparent;
+
+    border: none;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    transition: .3s ease;
+
 }
 
 
@@ -223,3 +235,4 @@
 
 
 }
+
