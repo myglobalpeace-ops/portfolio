@@ -1,0 +1,107 @@
+/* ===== About ===== */
+
+
+.about{
+
+    padding:100px 0;
+
+    background:var(--surface);
+
+}
+
+
+.section-title{
+
+    margin-bottom:50px;
+
+}
+
+
+.section-title p{
+
+    color:var(--primary);
+
+    font-weight:600;
+
+}
+
+
+.section-title h2{
+
+    font-size:42px;
+
+}
+
+
+
+.about-content{
+
+    display:grid;
+
+    grid-template-columns:1fr 350px;
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+
+
+.about-text p{
+
+    font-size:20px;
+
+    color:var(--text-light);
+
+    margin-bottom:20px;
+
+}
+
+
+
+.about-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+
+.info-card{
+
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+
+}
+
+
+
+.info-card strong{
+
+    display:block;
+
+    font-size:32px;
+
+    color:var(--primary);
+
+}
+
+
+
+.info-card span{
+
+    color:var(--text-light);
+
+}
