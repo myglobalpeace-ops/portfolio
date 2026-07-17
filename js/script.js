@@ -85,3 +85,41 @@ themeButton.addEventListener(
     }
 
 });
+
+const languageButton =
+document.querySelector(".language-toggle");
+
+
+let currentLanguage = "ru";
+
+
+languageButton.addEventListener(
+"click",
+()=>{
+
+
+    currentLanguage =
+    currentLanguage === "ru"
+    ? "en"
+    : "ru";
+
+
+    document
+    .querySelectorAll("[data-ru]")
+    .forEach(element=>{
+
+
+        element.textContent =
+        element.dataset[currentLanguage];
+
+
+    });
+
+
+    languageButton.textContent =
+    currentLanguage === "ru"
+    ? "EN"
+    : "RU";
+
+
+});
