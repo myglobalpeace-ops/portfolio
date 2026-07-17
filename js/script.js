@@ -62,40 +62,93 @@ navLinks.forEach(link=>{
 
 });
 
-const themeButton =
-document.querySelector(".theme-toggle");
 
 
-themeButton.addEventListener(
-"click",
-()=>{
-
-    document.body.classList.toggle("dark");
+// ===== Theme =====
 
 
-    if(document.body.classList.contains("dark")){
+const themeButton = document.querySelector(".theme-toggle");
 
-        themeButton.textContent="☀️";
+const themeIcon = document.querySelector(".theme-icon");
+
+const savedTheme =
+localStorage.getItem("theme");
+
+
+if(savedTheme === "dark"){
+
+    document.body.classList.add("dark");
+
+    if(themeIcon){
+
+        themeIcon.textContent="☀️";
+
+    }
+
+}
+
+if(themeButton){
+
+    themeButton.addEventListener("click", ()=>{
+
+
+        document.body.classList.toggle("dark");
+
+
+    const isDark =
+    document.body.classList.contains("dark");
+
+
+    localStorage.setItem(
+        "theme",
+        isDark ? "dark" : "light"
+    );
+
+
+
+    if(isDark){
+
+        themeIcon.textContent = "☀️";
 
     }
     else{
 
-        themeButton.textContent="🌙";
+        themeIcon.textContent = "🌙";
 
     }
 
-});
+
+    });
+
+}
+
+
+
+// ===== Language =====
+
 
 const languageButton =
 document.querySelector(".language-toggle");
 
 
-let currentLanguage = "ru";
+const langCurrent =
+document.querySelector(".lang-current");
 
 
-languageButton.addEventListener(
-"click",
-()=>{
+const langNext =
+document.querySelector(".lang-next");
+
+
+
+let currentLanguage =
+localStorage.getItem("language") || "ru";
+
+
+
+if(languageButton){
+
+
+languageButton.addEventListener("click", ()=>{
 
 
     currentLanguage =
@@ -103,6 +156,10 @@ languageButton.addEventListener(
     ? "en"
     : "ru";
 
+localStorage.setItem(
+"language",
+currentLanguage
+);
 
     document
     .querySelectorAll("[data-ru]")
@@ -116,10 +173,56 @@ languageButton.addEventListener(
     });
 
 
-    languageButton.textContent =
-    currentLanguage === "ru"
-    ? "EN"
-    : "RU";
+
+    if(currentLanguage === "ru"){
+
+        langCurrent.textContent="RU";
+        langNext.textContent="EN";
+
+    }
+    else{
+
+        langCurrent.textContent="EN";
+        langNext.textContent="RU";
+
+    }
 
 
 });
+
+
+}
+
+function setLanguage(){
+
+
+document
+.querySelectorAll("[data-ru]")
+.forEach(element=>{
+
+
+    element.textContent =
+    element.dataset[currentLanguage];
+
+
+});
+
+
+if(currentLanguage==="ru"){
+
+    langCurrent.textContent="RU";
+    langNext.textContent="EN";
+
+}
+else{
+
+    langCurrent.textContent="EN";
+    langNext.textContent="RU";
+
+}
+
+
+}
+
+
+setLanguage();

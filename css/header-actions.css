@@ -1,0 +1,108 @@
+/* ===== Header Actions ===== */
+
+
+.header-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+
+.theme-toggle,
+.language-toggle{
+
+    height:42px;
+
+    border-radius:14px;
+
+    border:1px solid var(--border);
+
+    background:var(--surface);
+
+    color:var(--text);
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:.3s;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+.theme-toggle{
+
+    width:42px;
+
+    font-size:20px;
+
+}
+
+
+
+.theme-toggle:hover,
+.language-toggle:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+
+.language-toggle{
+
+    padding:0 16px;
+
+    gap:6px;
+
+    font-weight:600;
+
+    font-size:14px;
+
+}
+
+
+
+.lang-current{
+
+    color:var(--primary);
+
+}
+
+
+
+.lang-divider{
+
+    opacity:.4;
+
+}
+
+
+
+.lang-next{
+
+    opacity:.6;
+
+}
+
+
+/* Dark theme */
+
+.dark .theme-toggle,
+.dark .language-toggle{
+
+    background:#1e293b;
+
+}
