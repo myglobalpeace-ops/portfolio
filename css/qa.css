@@ -1,7 +1,7 @@
-/* ===== Skills ===== */
+/* ===== QA ===== */
 
 
-.skills{
+.qa{
 
     padding:100px 0;
 
@@ -10,22 +10,19 @@
 }
 
 
-
-.skills-grid{
+.qa-grid{
 
     display:grid;
 
     grid-template-columns:
-
-    repeat(auto-fit,minmax(250px,1fr));
+    repeat(auto-fit,minmax(280px,1fr));
 
     gap:30px;
 
 }
 
 
-
-.skill-card{
+.qa-card{
 
     background:var(--surface);
 
@@ -40,16 +37,14 @@
 }
 
 
+.qa-card:hover{
 
-.skill-card:hover{
-
-    transform:translateY(-5px);
+    transform:translateY(-8px);
 
 }
 
 
-
-.skill-card h3{
+.qa-card h3{
 
     font-size:24px;
 
@@ -58,16 +53,14 @@
 }
 
 
-
-.skill-card ul{
+.qa-card ul{
 
     list-style:none;
 
 }
 
 
-
-.skill-card li{
+.qa-card li{
 
     padding:10px 0;
 
@@ -78,9 +71,8 @@
 }
 
 
+.qa-card li:last-child{
 
-.skill-card li:last-child{
-
-    border-bottom:none;
+    border:none;
 
 }

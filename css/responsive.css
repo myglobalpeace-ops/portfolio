@@ -104,7 +104,7 @@
 
     height:100vh;
 
-    background:white;
+    background:var(--surface);
 
     display:flex;
 

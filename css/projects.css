@@ -15,11 +15,12 @@
 }
 
 .project-card{
-    background:#fff;
+    background:var(--surface);
     border-radius:20px;
     overflow:hidden;
     box-shadow:0 12px 30px rgba(0,0,0,.08);
     transition:.3s;
+    
 }
 
 .project-card:hover{
@@ -55,8 +56,8 @@
 }
 
 .tags span{
-    background:#eef4ff;
-    color:#2563eb;
+    background:var(--surface);
+    color:var(--text-light);
     padding:6px 12px;
     border-radius:999px;
     font-size:14px;

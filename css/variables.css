@@ -1,0 +1,36 @@
+:root{
+
+    --bg:#f8fafc;
+
+    --surface:#ffffff;
+
+    --text:#1e293b;
+
+    --text-light:#64748b;
+
+    --primary:#2563eb;
+
+    --border:#e2e8f0;
+
+    --shadow:
+    0 15px 40px rgba(0,0,0,.08);
+
+}
+
+
+.dark{
+
+    --bg:#0f172a;
+
+    --surface:#1e293b;
+
+    --text:#f8fafc;
+
+    --text-light:#cbd5e1;
+
+    --border:#334155;
+
+    --shadow:
+    0 15px 40px rgba(0,0,0,.3);
+
+}

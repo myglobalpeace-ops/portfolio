@@ -40,7 +40,7 @@
 
 .timeline-content{
 
-    background:white;
+    background:var(--surface);
 
     padding:30px;
 
