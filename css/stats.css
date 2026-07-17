@@ -1,0 +1,45 @@
+.stats{
+
+    padding:60px 0;
+
+}
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+.stat{
+
+    text-align:center;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.stat h3{
+
+    color:var(--primary);
+
+    font-size:34px;
+
+    margin-bottom:10px;
+
+}
+
+.stat p{
+
+    color:var(--text-light);
+
+}
