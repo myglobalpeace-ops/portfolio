@@ -1,0 +1,184 @@
+/* ===== Tablet ===== */
+
+@media (max-width: 1024px){
+
+
+    .hero-content{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+
+    .hero-text{
+
+        max-width:700px;
+
+    }
+
+
+    .hero-image{
+
+        margin-top:40px;
+
+    }
+
+
+    .avatar{
+
+        width:320px;
+
+        height:320px;
+
+    }
+
+
+
+    .about-content{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+
+    .stats-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+
+    .timeline-item{
+
+        grid-template-columns:1fr;
+
+        gap:15px;
+
+    }
+
+
+}
+
+/* ===== Mobile ===== */
+
+
+@media (max-width:600px){
+
+
+    .container{
+
+        width:92%;
+
+    }
+
+
+
+    .header .container{
+
+        height:65px;
+
+    }
+
+
+
+    nav{
+
+        display:none;
+
+    }
+
+
+
+    .hero{
+
+        padding:60px 0;
+
+    }
+
+
+
+    .hero h1{
+
+        font-size:44px;
+
+    }
+
+
+
+    .hero h2{
+
+        font-size:24px;
+
+    }
+
+
+
+    .description{
+
+        font-size:17px;
+
+    }
+
+
+
+    .buttons{
+
+        flex-direction:column;
+
+    }
+
+
+
+    .btn{
+
+        text-align:center;
+
+    }
+
+
+
+    .avatar{
+
+        width:260px;
+
+        height:260px;
+
+    }
+
+
+
+    .section-title h2{
+
+        font-size:34px;
+
+    }
+
+
+
+    .projects-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+
+    .stats-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+
+    .contact-links{
+
+        flex-direction:column;
+
+    }
+
+
+}
