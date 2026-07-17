@@ -288,3 +288,16 @@ border-radius:16px;
     transition:.3s ease;
 
 }
+
+.cv-icon svg{
+
+width:28px;
+height:28px;
+
+fill:currentColor;
+
+ fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+
+}
