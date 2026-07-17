@@ -46,9 +46,27 @@ body {
 /* ===== Logo ===== */
 
 .logo {
-    font-family: "JetBrains Mono", monospace;
+   /* font-family: "JetBrains Mono", monospace;
     font-size: 30px;
-    font-weight: 700;
+    font-weight: 700;*/
+      width:48px;
+    height:48px;
+
+    border-radius:14px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+
+    color:white;
+
+    font-weight:700;
 }
 
 .logo span {
@@ -69,8 +87,26 @@ nav a {
     font-weight: 500;
 }
 
-nav a:hover {
+/*nav a:hover {
     color: var(--primary);
+}*/
+
+.nav a.active {
+    color: var(--primary);
+}
+
+.nav a::after{
+    content:"";
+    display:block;
+    width:0;
+    height:2px;
+    background:var(--primary);
+    transition:.3s;
+}
+
+.nav a.active::after,
+.nav a:hover::after{
+    width:100%;
 }
 
 /* ===== Header ===== */
@@ -78,10 +114,16 @@ nav a:hover {
 .header {
     position: sticky;
     top: 0;
-    background:var(--surface);
+   /* background:var(--surface);*/
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
-    z-index: 100;
+    z-index: 1000;
+
+  
+    -webkit-backdrop-filter: blur(12px);
+
+    background: color-mix(in srgb, var(--bg) 85%, transparent);
+
 }
 
 .header .container {
