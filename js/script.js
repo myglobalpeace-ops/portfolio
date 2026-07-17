@@ -46,11 +46,41 @@ menuButton.addEventListener(
 
 });
 
-const navLinks =
-document.querySelectorAll(".nav a");
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".nav a");
 
+function updateActiveLink() {
+    const scrollPosition = window.scrollY + window.innerHeight / 2;
 
-navLinks.forEach(link=>{
+    let currentSection = sections[0].id;
+
+    sections.forEach((section) => {
+        if (scrollPosition >= section.offsetTop) {
+            currentSection = section.id;
+        }
+    });
+
+    // Если пользователь дошел до самого низа страницы —
+    // принудительно активируем последний пункт меню
+    if (
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 5
+    ) {
+        currentSection = sections[sections.length - 1].id;
+    }
+
+    navLinks.forEach((link) => {
+        link.classList.toggle(
+            "active",
+            link.getAttribute("href") === `#${currentSection}`
+        );
+    });
+}
+
+window.addEventListener("scroll", updateActiveLink);
+window.addEventListener("load", updateActiveLink);
+
+/*navLinks.forEach(link=>{
 
     link.addEventListener(
     "click",
@@ -60,7 +90,7 @@ navLinks.forEach(link=>{
 
     });
 
-});
+});*/
 
 
 
@@ -226,3 +256,4 @@ else{
 
 
 setLanguage();
+

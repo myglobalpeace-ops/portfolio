@@ -15,6 +15,9 @@
 }
 
 .project-card{
+    display:flex;
+    flex-direction:column;
+    height:100%;
     background:var(--surface);
     border-radius:20px;
     overflow:hidden;
@@ -52,16 +55,25 @@
     display:flex;
     flex-wrap:wrap;
     gap:8px;
-    margin-bottom:24px;
+    margin:18px 0;
 }
 
 .tags span{
-    background:var(--surface);
+   /* background:var(--surface);*/
     color:var(--text-light);
     padding:6px 12px;
     border-radius:999px;
-    font-size:14px;
+   /* font-size:14px;*/
+    
+   
+    
+    background:var(--bg);
+    border:1px solid var(--border);
+    font-size:.85rem;
+    font-weight:500;
+    transition:.25s ease;
 }
+
 
 .project-links{
     display:flex;
