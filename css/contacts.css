@@ -120,30 +120,41 @@ border-color:var(--primary);
 
 .contact-icon{
 
-width:52px;
-
-height:52px;
-
-border-radius:16px;
+width:42px;
+height:42px;
 
 display:flex;
-
 align-items:center;
-
 justify-content:center;
 
-background:var(--primary);
+color:var(--primary);
+
+flex-shrink:0;
+
+transition:.3s ease;
 
 }
 
 
 .contact-icon svg{
 
-width:25px;
+width:28px;
+height:28px;
 
-height:25px;
+fill:currentColor;
 
-fill:white;
+/*stroke:currentColor;
+
+stroke-width:2;*/
+
+}
+
+
+.contact-card:hover .contact-icon{
+
+transform:scale(1.15);
+
+color:var(--primary);
 
 }
 
@@ -164,6 +175,8 @@ margin:5px 0 0;
 opacity:.7;
 
 font-size:14px;
+
+color:var(--text-muted, #64748b);
 
 }
 
@@ -237,7 +250,7 @@ grid-template-columns:1fr;
 }
 
 .contact-note{
-    
+
 display:inline-flex;
 
 align-items:center;
@@ -251,5 +264,27 @@ padding:16px 32px;
 
 
 border-radius:16px;
+
+}
+
+.contact-icon img {
+
+    width:28px;
+    height:28px;
+
+    object-fit:contain;
+
+    transition:.3s ease;
+
+}
+
+.cv-icon img {
+
+    width:28px;
+    height:28px;
+
+    object-fit:contain;
+
+    transition:.3s ease;
 
 }
