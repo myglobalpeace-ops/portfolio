@@ -1,0 +1,31 @@
+.toast{
+    position:fixed;
+    bottom:30px;
+    left:50%;
+    transform:translateX(-50%) translateY(100px);
+
+    padding:14px 24px;
+
+    background:var(--surface);
+    color:var(--text);
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+    opacity:0;
+
+    transition:.35s ease;
+
+    z-index:9999;
+}
+
+.toast.show{
+
+    opacity:1;
+
+    transform:translateX(-50%) translateY(0);
+
+}
